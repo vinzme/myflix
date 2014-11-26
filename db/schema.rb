@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20141115153757) do
     t.datetime "updated_at"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "full_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "video_categories", force: true do |t|
     t.integer  "video_id"
     t.integer  "category_id"
