@@ -48,10 +48,9 @@ feature "User interacts with the queue" do
 
   def add_video_to_queue(video)
     visit home_path
-    find("a[href='/videos/#{video.id}']").click
+    click_on_video_on_home_page(video)
     click_link "+ My Queue"
   end
-
 
   def set_video_position(video, position)
     within(:xpath, "//tr[contains(.,'#{video.title}')]") do
