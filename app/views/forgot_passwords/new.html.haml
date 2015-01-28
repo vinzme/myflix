@@ -7,9 +7,9 @@
           %h1 Forgot Password?
           %p We will send you an email with a link that you can use to reset your password.
         .form-group
-          %label Email Address
+          = label_tag :email, "Email Address"
           = text_field_tag :email
           .row
             .col-sm-4
         .form-group.action
-          %input(type="submit" value="Send Email" class="btn btn-default")
+          =submit_tag "Send Email", class: "btn btn-default"
